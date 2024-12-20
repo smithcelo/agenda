@@ -1,0 +1,32 @@
+<%- include('includes/head.ejs'); %>
+
+  <%- include('includes/nav') %>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-2"></div>
+
+        <div class="col-lg-8 my-3">
+          <h1 class=" text-center">Blog do Marcelo</h1>
+          <p class="lead text-center">Seja bem-vindo ao blog</p>
+
+          <%- include('includes/messages') %>
+
+          <% posts.forEach (post => { %>
+            <a href="post/<%=post._id%>"><%=  post.assunto  %> </a> <br>
+          <% }); %>
+
+          
+
+
+        </div>
+
+        <div class="col-lg-2"></div>
+
+      </div>
+
+    </div>
+
+
+    <%- include('includes/footer.ejs'); %>

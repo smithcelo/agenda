@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-center" style="height: 100vh; align-items: center;">
+  <div class="col-lg-8">
+    <div class="card">
+      <div class="card-body">
+        <form action="/login/login" method="POST">
+          <h3 class="text-center">Login</h2>
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control form-control-sm" name="email" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label>Senha</label>
+            <input type="password" class="form-control form-control-sm" name="password" placeholder="Enter password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+        <a href="/register" class="d-block mt-3 text-center">Não tem conta? Cadastre-se aqui.</a>
+      </div>
+    </div>
+  </div>
+</div>
